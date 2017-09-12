@@ -19,26 +19,24 @@
         android:id="@+id/imageHome"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/aboutus"
-        android:elevation="10dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="118dp" />
+        android:layout_marginStart="118dp"
+        android:elevation="10dp"
+        android:src="@drawable/aboutus" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/imageView3"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginBottom="20dp"
         android:layout_marginStart="28dp"
-        android:id="@+id/linearLayout2"
-        android:layout_marginBottom="20dp">
+        android:orientation="vertical">
 
-       <include layout="@layout/cardview"
-          />
-
+        <include layout="@layout/cardview" />
 
 
     </LinearLayout>
@@ -46,13 +44,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignEnd="@+id/imageHome"
         android:layout_gravity="start"
         android:paddingLeft="22dp"
         android:text="   About Us  "
-        android:textSize="20dp"
         android:textColor="#fff"
-        android:textStyle="bold"
-        android:layout_above="@+id/linearLayout2"
-        android:layout_alignEnd="@+id/imageHome" />
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
