@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+
+    android:padding="30dp"
+    app:cardMaxElevation="15dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="4dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Information"
+            android:textSize="30dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/location"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:text=" The Innovation Center \n
+                          Mark Shuttleworth Street\n
+                          The Innovation Hub \n
+                          Tshwane\n
+                          South Africa"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/emailss"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:text="The Innovation Center \n
+                          Mark Shuttleworth Street\n
+                          The Innovation Hub\n
+                          Tshwane\n
+                          South Africa"
+
+
+            android:maxLines="1"
+            android:padding="8dp"
+            />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:text="Phone No :    01245487785"
+            android:maxLines="1"
+            android:padding="8dp"
+            />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

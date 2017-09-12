@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="za.co.codetribe.kid.EventsActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/factfile" />
+
+    <ImageView
+        android:id="@+id/imageHome"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/gallery"
+        android:elevation="10dp"
+        android:layout_marginStart="115dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:paddingLeft="22dp"
+        android:text=" Gallery    "
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignStart="@+id/imageHome"
+        android:id="@+id/textView2" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/imageView3"
+        android:id="@+id/linearLayout3">
+
+
+    <include layout="@layout/cardviewimage"></include>
+
+ </LinearLayout>
+
+
+
+</RelativeLayout>
