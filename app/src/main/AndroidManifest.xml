@@ -17,15 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Eventhelper"
-
             android:label="Events"
        />
         <activity android:name=".AboutActivity"
 
             android:label="About us"/>
         <activity android:name=".ActivityEditsHelper"
-
-        android:label="Activities"/>
+            android:label="Activities"/>
         <activity android:name=".ActivitiesActivity"
 
             android:label="Activities"/>
@@ -41,9 +39,9 @@
         <activity android:name=".ProfileActivity"
 
             android:label="Profile"/>
-        <activity android:name=".ImageDisplayActivity"
-
-            android:label="Gallery"></activity>
+        <activity
+            android:name=".ImageDisplayActivity"
+            android:label="Gallery" />
     </application>
 
 </manifest>
