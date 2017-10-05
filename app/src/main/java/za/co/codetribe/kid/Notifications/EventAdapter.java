@@ -1,4 +1,4 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.Notifications;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import za.co.codetribe.kid.R;
+
 
 public class EventAdapter extends ArrayAdapter<Event> {
 
@@ -20,7 +22,7 @@ public class EventAdapter extends ArrayAdapter<Event> {
         private List<Event> eventList;
 
         public EventAdapter( Activity context,List<Event> eventList) {
-            super(context,R.layout.activity_events,eventList);
+            super(context, R.layout.activity_events,eventList);
             this.context = context;
             this.eventList=eventList;
         }

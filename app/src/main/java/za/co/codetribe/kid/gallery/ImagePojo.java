@@ -1,4 +1,4 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.gallery;
 
 /**
  * Created by Codetribe on 2017/09/02.

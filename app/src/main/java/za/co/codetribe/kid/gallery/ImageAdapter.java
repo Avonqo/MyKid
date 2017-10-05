@@ -1,4 +1,4 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.gallery;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -11,9 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import za.co.codetribe.kid.R;
 
 
 public class ImageAdapter extends ArrayAdapter<ImagePojo> {

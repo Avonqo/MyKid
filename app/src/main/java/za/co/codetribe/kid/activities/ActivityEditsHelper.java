@@ -1,6 +1,5 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,10 +18,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import org.w3c.dom.Comment;
-
-import static android.R.attr.name;
-import static za.co.codetribe.kid.R.id.uploadImage;
+import za.co.codetribe.kid.R;
 
 public class ActivityEditsHelper extends AppCompatActivity {
 

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="za.co.codetribe.mynfirst.Home1Activity">
+    <item
+        android:id="@+id/parent"
+        android:orderInCategory="100"
+        android:title="Parent"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/teacher"
+        android:orderInCategory="100"
+        android:title="Teacher"
+        app:showAsAction="ifRoom" />
+</menu>

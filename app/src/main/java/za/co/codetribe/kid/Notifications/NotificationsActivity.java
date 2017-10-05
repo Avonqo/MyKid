@@ -1,8 +1,10 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.Notifications;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import za.co.codetribe.kid.R;
 
 public class NotificationsActivity extends AppCompatActivity {
 

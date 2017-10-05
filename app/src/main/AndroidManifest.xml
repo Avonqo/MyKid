@@ -16,31 +16,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Eventhelper"
+        <activity android:name=".Notifications.Eventhelper"
             android:label="Events"
        />
-        <activity android:name=".AboutActivity"
+        <activity android:name=".aboutUs.AboutActivity"
 
             android:label="About us"/>
-        <activity android:name=".ActivityEditsHelper"
+        <activity android:name=".activities.ActivityEditsHelper"
             android:label="Activities"/>
-        <activity android:name=".ActivitiesActivity"
+        <activity android:name=".activities.ActivitiesActivity"
 
             android:label="Activities"/>
         <activity android:name=".InquriesActivity"
 
             android:label="Inquries"/>
-        <activity android:name=".NotificationsActivity"
+        <activity android:name=".Notifications.NotificationsActivity"
 
             android:label="Notification"/>
-        <activity android:name=".GallaryActivity"
+        <activity android:name=".gallery.GallaryActivity"
 
-            android:label="Gallery"/>
-        <activity android:name=".ProfileActivity"
+        android:label="Gallery"/>
+        <activity android:name=".profile.Register"
+
+            android:label=" Register"/>
+
+        <activity android:name=".profile.ProfileActivity"
 
             android:label="Profile"/>
+        <activity android:name=".profile.ViewProfileActivity"
+
+            android:label=" View Profile"/>
+        <activity android:name=".HomeActivity"
+
+            android:label="Gallery"/>
         <activity
-            android:name=".ImageDisplayActivity"
+            android:name=".gallery.ImageDisplayActivity"
             android:label="Gallery" />
     </application>
 

@@ -1,4 +1,4 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,18 +19,12 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import za.co.codetribe.kid.R;
+
 import static za.co.codetribe.kid.R.id.saveData;
-import static za.co.codetribe.kid.R.id.uploadImage;
 
 
-
-
-
-
-
-
-
-    public class ActivitiesActivity extends AppCompatActivity {
+public class ActivitiesActivity extends AppCompatActivity {
 
         private static final int ACTION_CODE = 1;
         private StorageReference storageReference;
