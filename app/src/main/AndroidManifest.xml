@@ -20,28 +20,31 @@
             android:label="Events"
        />
         <activity android:name=".AboutActivity"
-
             android:label="About us"/>
+
         <activity android:name=".ActivityEditsHelper"
             android:label="Activities"/>
+
         <activity android:name=".ActivitiesActivity"
-
             android:label="Activities"/>
+
         <activity android:name=".InquriesActivity"
-
             android:label="Inquries"/>
+
         <activity android:name=".NotificationsActivity"
-
             android:label="Notification"/>
+
         <activity android:name=".GallaryActivity"
-
             android:label="Gallery"/>
-        <activity android:name=".ProfileActivity"
 
+        <activity android:name=".ProfileActivity"
             android:label="Profile"/>
+
         <activity
             android:name=".ImageDisplayActivity"
             android:label="Gallery" />
+
+        <activity android:name=".Parent_event"></activity>
     </application>
 
 </manifest>

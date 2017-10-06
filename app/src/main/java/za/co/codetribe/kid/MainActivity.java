@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,EventsActivity.class);
+                Intent intent = new Intent(MainActivity.this,Parent_event.class);
                 startActivity(intent);
 
             }

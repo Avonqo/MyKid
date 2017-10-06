@@ -8,11 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.Windows.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme.PopupOverlay">AppTheme</style>
 
+    <style name="Divider">
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#880e4f</item>
     </style>
+
+    <style name="Divider_invisible">
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
 </resources>
