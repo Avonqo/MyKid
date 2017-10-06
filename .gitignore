@@ -8,5 +8,11 @@
 /captures
 .externalNativeBuild
 .idea/misc.xml
+<<<<<<< HEAD
 .idea/misc.xml
+=======
+.idea/modules.xml
+.idea/modules.xml
+.idea/modules.xml
+>>>>>>> dad88d8e9fc0b8bf8cf5b24d2ef8df311fdf6524
 .idea/misc.xml

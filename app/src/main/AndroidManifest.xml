@@ -16,10 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Notifications.Eventhelper"
+        <activity android:name=".notifications.Eventhelper"
             android:label="Events"
        />
-        <activity android:name=".aboutUs.AboutActivity"
+        <activity android:name=".aboutus.AboutActivity"
 
             android:label="About us"/>
         <activity android:name=".activities.ActivityEditsHelper"
@@ -30,7 +30,7 @@
         <activity android:name=".InquriesActivity"
 
             android:label="Inquries"/>
-        <activity android:name=".Notifications.NotificationsActivity"
+        <activity android:name=".notifications.NotificationsActivity"
 
             android:label="Notification"/>
         <activity android:name=".gallery.GallaryActivity"

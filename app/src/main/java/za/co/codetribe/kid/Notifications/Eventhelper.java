@@ -1,4 +1,4 @@
-package za.co.codetribe.kid.Notifications;
+package za.co.codetribe.kid.notifications;
 
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -29,115 +29,102 @@ import za.co.codetribe.kid.R;
  */
 
 
+public class Eventhelper extends AppCompatActivity {
 
-    public class Eventhelper extends AppCompatActivity {
-
-        EditText Ename, Edescription;
-        String eName, eDescription;
-        Button save;
+    EditText Ename, Edescription;
+    String eName, eDescription;
+    Button save;
     Boolean val = true;
 
 
-FirebaseDatabase firebaseData;
-        DatabaseReference roofdef, demodef;
-        ListView listview;
-        List<Event> eventList;
+    FirebaseDatabase firebaseData;
+    DatabaseReference roofdef, demodef;
+    ListView listview;
+    List<Event> eventList;
 
 
-        //ProfileActivityhelpers helper;
+    //ProfileActivityhelpers helper;
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        finish();
+
         return super.onOptionsItemSelected(item);
 
     }
 
 
-
     @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_events);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_events);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-            listview= (ListView) findViewById(R.id.listView);
-
-
-            save = (Button) findViewById(R.id.saveData);
-
-            eventList= new ArrayList<>();
-
-            Ename = (EditText) findViewById(R.id.eventName);
-            Edescription = (EditText) findViewById(R.id.eventDescription);
-
-            roofdef = FirebaseDatabase.getInstance().getReference();
-
-            demodef = roofdef.child("Events");
+        listview = (ListView) findViewById(R.id.listView);
 
 
+        save = (Button) findViewById(R.id.saveData);
+
+        eventList = new ArrayList<>();
+
+        Ename = (EditText) findViewById(R.id.eventName);
+        Edescription = (EditText) findViewById(R.id.eventDescription);
+
+        roofdef = FirebaseDatabase.getInstance().getReference();
+
+        demodef = roofdef.child("Events");
 
 
-            save.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-
-                    addEvent();
-                }
-
-
-            });
-
-
-
-        }
-
-        private void addEvent()
-        {
-            Event event = new Event();
-            eName = Ename.getText().toString().trim();
-            eDescription = Edescription.getText().toString().trim();
-
-
-            if (!TextUtils.isEmpty(eName))
-            {
-                event.setEventName(eName);
-
-
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addEvent();
             }
-            else
-            {
+        });
+
+    }
+
+    private void addEvent() {
+        Event event = new Event();
+        eName = Ename.getText().toString().trim();
+        eDescription = Edescription.getText().toString().trim();
+
+
+        if (!TextUtils.isEmpty(eName)) {
+            event.setEventName(eName);
+
+
+        } else {
+            Toast.makeText(Eventhelper.this, "Event not saved ", Toast.LENGTH_LONG).show();
+        }
+        if (!TextUtils.isEmpty(eDescription)) {
+            event.setEventDiscription(eDescription);
+
+
+        } else {
+            Toast.makeText(Eventhelper.this, "no desc", Toast.LENGTH_LONG).show();
+        }
+        Event eve = new Event(eName, eDescription);
+        demodef.push().setValue(eve);
+
+        Ename.setText(" ");
+        Edescription.setText(" ");
+        try {
+
+
+        } catch (Exception e) {
+            val = false;
+        } finally {
+            if (val) {
+                Toast.makeText(Eventhelper.this, "Event saved ", Toast.LENGTH_LONG).show();
+            } else {
                 Toast.makeText(Eventhelper.this, "Event not saved ", Toast.LENGTH_LONG).show();
             }
-            if (!TextUtils.isEmpty(eDescription))
-            {
-                event.setEventDiscription(eDescription);
-
-
-            }
-            else
-            {
-                Toast.makeText(Eventhelper.this, "no desc", Toast.LENGTH_LONG).show();
-            }
-                Event eve = new Event(eName,eDescription);
-            demodef.push().setValue(eve);
-
-            Ename.setText(" ");
-            Edescription.setText(" ");
-            try {
-
-
-            }catch (Exception e){
-                val = false;
-            }finally {
-                if(val){ Toast.makeText(Eventhelper.this, "Event saved ", Toast.LENGTH_LONG).show();}else {Toast.makeText(Eventhelper.this, "Event not saved ", Toast.LENGTH_LONG).show();}
-            }
-
         }
-        //fetch
+
+    }
+    //fetch
 
     @Override
     protected void onStart() {
@@ -146,20 +133,19 @@ FirebaseDatabase firebaseData;
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                    eventList.clear();
+                eventList.clear();
 
-                Log.i(" f=====================",dataSnapshot.toString());
+                Log.i(" f=====================", dataSnapshot.toString());
 
-                for(DataSnapshot  eventsShot:dataSnapshot.getChildren())
-                    {
-                        Log.i(" AVIWE",eventsShot.toString());
-                        Event event = eventsShot.getValue(Event.class);
-                        eventList.add(event);
+                for (DataSnapshot eventsShot : dataSnapshot.getChildren()) {
+                    Log.i(" AVIWE", eventsShot.toString());
+                    Event event = eventsShot.getValue(Event.class);
+                    eventList.add(event);
 
-                    }
+                }
 
-                    EventAdapter adapter=new EventAdapter(Eventhelper.this,eventList);
-                    listview.setAdapter(adapter);
+                EventAdapter adapter = new EventAdapter(Eventhelper.this, eventList);
+                listview.setAdapter(adapter);
 
             }
 
@@ -172,30 +158,27 @@ FirebaseDatabase firebaseData;
     }
 
 
-            public void  showUpdateDIALOG(String id,String eventName,String eventDescription )
-            {
-                AlertDialog.Builder dialogBuilder= new AlertDialog.Builder(this);
-                LayoutInflater inflater=getLayoutInflater();
+    public void showUpdateDIALOG(String id, String eventName, String eventDescription) {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
 
-                final View dialogView=inflater.inflate(R.layout.dialog,null);
-                dialogBuilder.setView(dialogView);
+        final View dialogView = inflater.inflate(R.layout.dialog, null);
+        dialogBuilder.setView(dialogView);
 
-               final EditText Ename = (EditText)dialogView.findViewById(R.id.eventName);
-                final EditText Edescription = (EditText)dialogView.findViewById(R.id.eventDescription);
-                final Button update = (Button)dialogView.findViewById(R.id.update);
+        final EditText Ename = (EditText) dialogView.findViewById(R.id.eventName);
+        final EditText Edescription = (EditText) dialogView.findViewById(R.id.eventDescription);
+        final Button update = (Button) dialogView.findViewById(R.id.update);
 
-                dialogBuilder.setTitle("Update Event"+ id);
+        dialogBuilder.setTitle("Update Event" + id);
 
-                AlertDialog alertDialog=dialogBuilder.create();
-                alertDialog.show();
-
-
-
-
-            }
+        AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.show();
 
 
     }
+
+
+}
 
 
 

@@ -1,4 +1,4 @@
-package za.co.codetribe.kid.Notifications;
+package za.co.codetribe.kid.notifications;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;

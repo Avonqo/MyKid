@@ -8,9 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import za.co.codetribe.kid.Notifications.Eventhelper;
-import za.co.codetribe.kid.Notifications.EventsActivity;
-import za.co.codetribe.kid.aboutUs.AboutActivity;
+import za.co.codetribe.kid.notifications.Eventhelper;
+import za.co.codetribe.kid.notifications.EventsActivity;
+import za.co.codetribe.kid.aboutus.AboutActivity;
 import za.co.codetribe.kid.activities.ActivitiesActivity;
 import za.co.codetribe.kid.gallery.GallaryActivity;
 import za.co.codetribe.kid.profile.ProfileActivity;

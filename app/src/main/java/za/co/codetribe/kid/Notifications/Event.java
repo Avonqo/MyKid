@@ -1,4 +1,4 @@
-package za.co.codetribe.kid.Notifications;
+package za.co.codetribe.kid.notifications;
 
 /**
  * Created by Codetribe on 2017/09/01.

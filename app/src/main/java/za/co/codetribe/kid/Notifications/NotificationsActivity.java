@@ -1,4 +1,4 @@
-package za.co.codetribe.kid.Notifications;
+package za.co.codetribe.kid.notifications;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
