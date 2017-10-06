@@ -23,6 +23,8 @@ import za.co.codetribe.kid.R;
 public class Register extends AppCompatActivity {
 
 
+    
+
     Button re;
     TextView text;
     EditText edtemail;
