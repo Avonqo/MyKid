@@ -1,6 +1,7 @@
 package za.co.codetribe.kid;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
@@ -13,6 +14,7 @@ import za.co.codetribe.kid.notifications.EventsActivity;
 import za.co.codetribe.kid.aboutus.AboutActivity;
 import za.co.codetribe.kid.activities.ActivitiesActivity;
 import za.co.codetribe.kid.gallery.GallaryActivity;
+import za.co.codetribe.kid.notifications.Parent_event;
 import za.co.codetribe.kid.profile.ProfileActivity;
 import za.co.codetribe.kid.profile.ViewProfileActivity;
 
@@ -44,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,EventsActivity.class);
+                Intent intent = new Intent(HomeActivity.this,Parent_event.class);
                 startActivity(intent);
 
             }
@@ -76,8 +78,12 @@ public class HomeActivity extends AppCompatActivity {
         aboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,AboutActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(HomeActivity.this,AboutActivity.class);
+//                startActivity(intent);
+
+                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+                intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
+                startActivity(intent1);
 
             }
         });
