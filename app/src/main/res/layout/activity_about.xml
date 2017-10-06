@@ -28,15 +28,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView3"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="28dp"
         android:orientation="vertical">
 
-        <include layout="@layout/cardview" />
+        <include
+            layout="@layout/cardview" />
 
 
     </LinearLayout>
