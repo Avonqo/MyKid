@@ -8,7 +8,9 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import za.co.codetribe.kid.gallery.GallaryActivityParent;
 import za.co.codetribe.kid.notifications.Eventhelper;
 import za.co.codetribe.kid.notifications.EventsActivity;
 import za.co.codetribe.kid.aboutus.AboutActivity;
@@ -20,7 +22,7 @@ import za.co.codetribe.kid.profile.ViewProfileActivity;
 
 public class HomeActivity extends AppCompatActivity {
     ImageView events,notification,gallary,activities,aboutUs,inquiries,profile;
-
+    TextView parentg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         inquiries=(ImageView)findViewById(R.id.imageInquiries);
         notification=(ImageView)findViewById(R.id.imageNotification);
         profile =(ImageView)findViewById(R.id.imageProfile);
-
+        parentg =(TextView) findViewById(R.id.parentGallery);
 
         events.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -118,5 +120,9 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void parentg(View view){
+        Intent intent = new Intent(HomeActivity.this,GallaryActivityParent.class);
+        startActivity(intent);
     }
 }
