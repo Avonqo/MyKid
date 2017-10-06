@@ -23,9 +23,9 @@ import za.co.codetribe.kid.R;
 public class Register extends AppCompatActivity {
 
 
-    
 
-    Button re;
+
+    Button registerButton;
     TextView text;
     EditText edtemail;
     EditText edtpassword;
@@ -41,7 +41,7 @@ public class Register extends AppCompatActivity {
 
         progressDialog=new ProgressDialog(this);
 
-            re=(Button)findViewById(R.id.btnRegister);
+            registerButton =(Button)findViewById(R.id.btnRegister);
         edtemail=(EditText)findViewById(R.id.edtEmail);
         edtpassword=(EditText)findViewById(R.id.edtPassword);
         text=(TextView) findViewById(R.id.txtSign);
