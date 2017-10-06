@@ -55,8 +55,9 @@ public class ProfileActivity extends AppCompatActivity {
 
         if (firebaseAuth.getCurrentUser()==null)
         {
-            finish();
+
             Intent intent=new Intent(ProfileActivity.this,HomeActivity.class);
+            startActivity(intent);
         }
 
         FirebaseUser user=firebaseAuth.getCurrentUser();

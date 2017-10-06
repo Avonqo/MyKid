@@ -19,61 +19,41 @@
         <activity android:name=".notifications.Eventhelper"
             android:label="Events"
        />
-<<<<<<< HEAD
+
         <activity android:name=".aboutus.AboutActivity"
 
             android:label="About us"/>
         <activity android:name=".activities.ActivityEditsHelper"
             android:label="Activities"/>
+
         <activity android:name=".activities.ActivitiesActivity"
-=======
-        <activity android:name=".AboutActivity"
-            android:label="About us"/>
-
-        <activity android:name=".ActivityEditsHelper"
-            android:label="Activities"/>
->>>>>>> 3c1a755d8ff927f705d608c425a0d1f81a453f8c
-
-        <activity android:name=".ActivitiesActivity"
             android:label="Activities"/>
 
         <activity android:name=".InquriesActivity"
             android:label="Inquries"/>
-<<<<<<< HEAD
+
         <activity android:name=".notifications.NotificationsActivity"
-=======
->>>>>>> 3c1a755d8ff927f705d608c425a0d1f81a453f8c
-
-        <activity android:name=".NotificationsActivity"
             android:label="Notification"/>
-<<<<<<< HEAD
-        <activity android:name=".gallery.GallaryActivity"
 
-        android:label="Gallery"/>
         <activity android:name=".profile.Register"
 
             android:label=" Register"/>
 
-        <activity android:name=".profile.ProfileActivity"
-=======
 
-        <activity android:name=".GallaryActivity"
+        <activity android:name=".gallery.GallaryActivity"
             android:label="Gallery"/>
->>>>>>> 3c1a755d8ff927f705d608c425a0d1f81a453f8c
 
-        <activity android:name=".ProfileActivity"
+        <activity android:name=".profile.ProfileActivity"
             android:label="Profile"/>
-<<<<<<< HEAD
+
         <activity android:name=".profile.ViewProfileActivity"
 
             android:label=" View Profile"/>
         <activity android:name=".HomeActivity"
 
             android:label="Gallery"/>
-=======
 
->>>>>>> 3c1a755d8ff927f705d608c425a0d1f81a453f8c
-        <activity
+       <activity
             android:name=".gallery.ImageDisplayActivity"
             android:label="Gallery" />
 
