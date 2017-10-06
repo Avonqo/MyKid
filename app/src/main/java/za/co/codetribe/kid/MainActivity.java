@@ -52,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
     }
+<<<<<<< HEAD
+=======
+});
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Parent_event.class);
+                startActivity(intent);
+>>>>>>> 3c1a755d8ff927f705d608c425a0d1f81a453f8c
 
     public void login(View view) {
         loginUser();
