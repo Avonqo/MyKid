@@ -1,4 +1,4 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.notifications;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import za.co.codetribe.kid.R;
 
 public class Parent_event extends AppCompatActivity {
     ListView listview;

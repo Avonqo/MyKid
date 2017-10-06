@@ -1,4 +1,4 @@
-package za.co.codetribe.kid;
+package za.co.codetribe.kid.notifications;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
+
+import za.co.codetribe.kid.R;
 
 
 public class ParentsEvent extends ArrayAdapter<Event> {

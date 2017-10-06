@@ -21,6 +21,9 @@ import za.co.codetribe.kid.profile.ForgetActivity;
 import za.co.codetribe.kid.profile.ProfileActivity;
 import za.co.codetribe.kid.profile.Register;
 
+import static za.co.codetribe.kid.R.drawable.notification;
+import static za.co.codetribe.kid.R.id.view;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,23 +47,16 @@ public class MainActivity extends AppCompatActivity {
         text=(TextView) findViewById(R.id.txtSign);
 
         firebase= FirebaseAuth.getInstance();
+        // if(firebase.getCurrentUser()==null)
+        //{
+        //  startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+        //  finish();
+        //}
 
-//        if(firebase.getCurrentUser()==null)
-//        {
-//            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
-//            finish();
-//        }
+
+
 
     }
-<<<<<<< HEAD
-=======
-});
-        notification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Parent_event.class);
-                startActivity(intent);
->>>>>>> 3c1a755d8ff927f705d608c425a0d1f81a453f8c
 
     public void login(View view) {
         loginUser();
