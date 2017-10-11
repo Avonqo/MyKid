@@ -1,14 +1,19 @@
 package za.co.codetribe.kid.profile;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -26,6 +31,7 @@ import za.co.codetribe.kid.R;
 
 public class ViewProfileActivity extends AppCompatActivity {
 
+    Context context;
     TextView name, surname, address, gender, parentName, parentContact, dateofbirth;
 
     DatabaseReference roofdef, demodef;
@@ -39,7 +45,7 @@ public class ViewProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewprofile);
-
+        context = getBaseContext();
 
         roofdef = FirebaseDatabase.getInstance().getReference("learn");
 
@@ -54,6 +60,7 @@ public class ViewProfileActivity extends AppCompatActivity {
 
         view = (Button) findViewById(R.id.view);
 
+        final ImageView profilePic=(ImageView)findViewById(R.id.imageView);
         name = (TextView) findViewById(R.id.editname);
         surname = (TextView) findViewById(R.id.editsurname);
         address = (TextView) findViewById(R.id.editaddress);
@@ -78,28 +85,35 @@ public class ViewProfileActivity extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext()," no data ",Toast.LENGTH_LONG).show();
         }
-          else if(user!= null) {
-            DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Leaners").child(user.getUid());
-            database.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    Log.i("results" ,dataSnapshot.toString());
-                    Learners learners=dataSnapshot.getValue(Learners.class);
-                    name.setText(learners.getName());
-                    surname.setText(learners.getSurname());
-                    address.setText(learners.getAddress());
-                    gender.setText(learners.getGender());
-                    parentName.setText(learners.getParentName());
-                    parentContact.setText(learners.getParentContants());
-                    dateofbirth.setText(learners.getDateofbith());
-                }
+          else {
+            if (user != null) {
+                DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Leaners").child(user.getUid());
+                database.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        Log.i("results", dataSnapshot.toString());
+                        Learners learners = dataSnapshot.getValue(Learners.class);
+                        name.setText(learners.getName());
+                        surname.setText(learners.getSurname());
+                        address.setText(learners.getAddress());
+                        gender.setText(learners.getGender());
+                        parentName.setText(learners.getParentName());
+                        parentContact.setText(learners.getParentContants());
+                        dateofbirth.setText(learners.getDateofbith());
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
+                        Glide.with(context).load(learners.getUrl()).into(profilePic);
+                        //profilePic.setImageURI(Uri.parse(learners.getUrl()));
+                    }
 
-                }
-            });
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+            }
         }
+
+
 
 
 

@@ -36,21 +36,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
 
-        progressDialog=new ProgressDialog(this);
+        progressDialog = new ProgressDialog(this);
 
-        edtemail=(EditText)findViewById(R.id.edtEmail);
-        edtpassword=(EditText)findViewById(R.id.edtPassword);
-        text=(TextView) findViewById(R.id.txtSign);
+        edtemail = (EditText) findViewById(R.id.edtEmail);
+        edtpassword = (EditText) findViewById(R.id.edtPassword);
+        text = (TextView) findViewById(R.id.txtSign);
 
-        firebase= FirebaseAuth.getInstance();
-        // if(firebase.getCurrentUser()==null)
-        //{
-        //  startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
-        //  finish();
-        //}
-
-
-
+        firebase = FirebaseAuth.getInstance();
+        if(firebase.getCurrentUser()==null)
+        {
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+            finish();
+        }
 
     }
 
@@ -58,44 +55,38 @@ public class MainActivity extends AppCompatActivity {
         loginUser();
     }
 
-    public void loginUser()
-    {
-        String email=edtemail.getText().toString().trim();
-        String password=edtemail.getText().toString().trim();
+    public void loginUser() {
+        String email = edtemail.getText().toString().trim();
+        String password = edtemail.getText().toString().trim();
 
-        if(TextUtils.isEmpty(email))
-        {
-            Toast.makeText( getApplicationContext(),"Please enter your email  ", Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Please enter your email  ", Toast.LENGTH_LONG).show();
 
             return;
-        }
-        else if (TextUtils.isEmpty(password))
-        {
-            Toast.makeText( getApplicationContext(),"Please enter your password  ", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplicationContext(), "Please enter your password  ", Toast.LENGTH_LONG).show();
             return;
         }
 //        progressDialog.setMessage("Registering user......");
 //        progressDialog.show();
 
-        firebase.signInWithEmailAndPassword(email,password)
+        firebase.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
-                        if(task.isSuccessful())
-                        {
-                            startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                        if (task.isSuccessful()) {
+                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                             finish();
-                        }
-                        else {
-                            Toast.makeText( getApplicationContext(),"User not successful registered...please try again ", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "User not successful registered...please try again ", Toast.LENGTH_LONG).show();
                         }
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText( getApplicationContext(),"Error "+e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Error " + e.getMessage(), Toast.LENGTH_LONG).show();
 
             }
         });
@@ -103,17 +94,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-    public void register(View view)
-    {
-        Intent intent = new Intent(MainActivity.this,Register.class);
+    public void register(View view) {
+        Intent intent = new Intent(MainActivity.this, Register.class);
         startActivity(intent);
     }
 
-    public void passwordForget(View view)
-    {
-        Intent intent = new Intent(this,ForgetActivity.class);
+    public void passwordForget(View view) {
+        Intent intent = new Intent(this, ForgetActivity.class);
         startActivity(intent);
     }
 

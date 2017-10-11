@@ -23,7 +23,7 @@ import za.co.codetribe.kid.R;
 public class ImageDisplayActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
     List<ImagePojo> imgList;
- ListView listView;
+    ListView listView;
 
     ProgressDialog pd;
 
@@ -36,10 +36,6 @@ public class ImageDisplayActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,36 +44,30 @@ public class ImageDisplayActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        listView=(ListView) findViewById(R.id.listImages);
+        listView = (ListView) findViewById(R.id.listImages);
 
-        imgList =new ArrayList<>();
+        imgList = new ArrayList<>();
 
-        pd =new ProgressDialog(this);
+        pd = new ProgressDialog(this);
         pd.setMessage(" please wait ....");
         pd.show();
 
-        databaseReference= FirebaseDatabase.getInstance().getReference(GallaryActivity.Database_Path);
-       databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference = FirebaseDatabase.getInstance().getReference(GallaryActivity.Database_Path);
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 pd.dismiss();
 
-                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
-                {
-                    Log.i(" AVIWE",dataSnapshot.toString());
-                    ImagePojo imagePojo =(ImagePojo) dataSnapshot1.getValue(ImagePojo.class);
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    Log.i(" AVIWE", dataSnapshot.toString());
+                    ImagePojo imagePojo = (ImagePojo) dataSnapshot1.getValue(ImagePojo.class);
                     imgList.add(imagePojo);
 
                 }
 
 
-
-
-
-               ImageAdapter adapter = new ImageAdapter(ImageDisplayActivity.this,R.layout.activity_gallarylist,imgList);
+                ImageAdapter adapter = new ImageAdapter(ImageDisplayActivity.this, R.layout.activity_gallarylist, imgList);
                 listView.setAdapter(adapter);
-
-
 
 
             }
@@ -88,8 +78,6 @@ public class ImageDisplayActivity extends AppCompatActivity {
 
             }
         });
-
-
 
 
     }

@@ -52,8 +52,17 @@
         <activity
             android:name=".gallery.ImageDisplayActivity"
             android:label="Gallery" />
+<<<<<<< HEAD
         <activity android:name=".notifications.Parent_event" />
         <activity android:name=".MainActivity"></activity>
+=======
+
+        <activity
+            android:name=".gallery.GallaryActivityParent"
+            android:label="Gallery Parent" />
+
+        <activity android:name=".notifications.Parent_event"></activity>
+>>>>>>> 5de11f0c75823a6bc7884ee51470e8fa2b035e61
     </application>
 
 </manifest>
