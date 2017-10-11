@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,14 @@
        />
 
         <activity android:name=".aboutus.AboutActivity"
-
             android:label="About us"/>
+
+        <activity android:name=".MainActivity"
+            android:label="School"/>
+
+        <activity android:name=".HomeParent"
+            android:label="Parent"/>
+
         <activity android:name=".activities.ActivityEditsHelper"
             android:label="Activities"/>
 
@@ -36,9 +42,7 @@
             android:label="Notification"/>
 
         <activity android:name=".profile.Register"
-
             android:label=" Register"/>
-
 
         <activity android:name=".gallery.GallaryActivity"
             android:label="Gallery"/>
@@ -47,11 +51,10 @@
             android:label="Profile"/>
 
         <activity android:name=".profile.ViewProfileActivity"
-
             android:label=" View Profile"/>
-        <activity android:name=".HomeActivity"
 
-            android:label="Gallery"/>
+        <activity android:name=".HomeActivity"
+            android:label="School"/>
 
        <activity
             android:name=".gallery.ImageDisplayActivity"
@@ -60,6 +63,10 @@
         <activity
             android:name=".gallery.GallaryActivityParent"
             android:label="Gallery Parent" />
+
+        <activity
+            android:name=".tableLayout"
+            android:label="Activities" />
 
         <activity android:name=".notifications.Parent_event"></activity>
     </application>
