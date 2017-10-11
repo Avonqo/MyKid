@@ -19,6 +19,7 @@
         android:layout_height="120dp"
         android:src="@drawable/home"
         android:elevation="10dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <ImageView
