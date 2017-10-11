@@ -53,15 +53,11 @@
             android:name=".gallery.ImageDisplayActivity"
             android:label="Gallery" />
         <activity android:name=".notifications.Parent_event" />
-        <activity android:name=".MainActivity"></activity>
-
-
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".gallery.GallaryActivityParent"
             android:label="Gallery Parent" />
-
-
-
+        <activity android:name=".Schoolregister"></activity>
     </application>
 
 </manifest>
