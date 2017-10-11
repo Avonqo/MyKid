@@ -9,55 +9,69 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".notifications.Eventhelper"
+            android:label="Events"
+       />
+
+        <activity android:name=".aboutus.AboutActivity"
+            android:label="About us"/>
+
+        <activity android:name=".MainActivity"
+            android:label="School"/>
+
+        <activity android:name=".HomeParent"
+            android:label="Parent"/>
+
+        <activity android:name=".activities.ActivityEditsHelper"
+            android:label="Activities"/>
+
+        <activity android:name=".activities.ActivitiesActivity"
+            android:label="Activities"/>
+
+        <activity android:name=".InquriesActivity"
+            android:label="Inquries"/>
+
+        <activity android:name=".notifications.NotificationsActivity"
+            android:label="Notification"/>
+
+        <activity android:name=".profile.Register"
+            android:label=" Register"/>
+
+        <activity android:name=".gallery.GallaryActivity"
+            android:label="Gallery"/>
+
+        <activity android:name=".profile.ProfileActivity"
+            android:label="Profile"/>
+
+        <activity android:name=".profile.ViewProfileActivity"
+            android:label=" View Profile"/>
+
+        <activity android:name=".HomeActivity"
+            android:label="School"/>
+
         <activity
-            android:name=".notifications.Eventhelper"
-            android:label="Events" />
-        <activity
-            android:name=".aboutus.AboutActivity"
-            android:label="About us" />
-        <activity
-            android:name=".activities.ActivityEditsHelper"
-            android:label="Activities" />
-        <activity
-            android:name=".activities.ActivitiesActivity"
-            android:label="Activities" />
-        <activity
-            android:name=".InquriesActivity"
-            android:label="Inquries" />
-        <activity
-            android:name=".notifications.NotificationsActivity"
-            android:label="Notification" />
-        <activity
-            android:name=".profile.Register"
-            android:label=" Register" />
-        <activity
-            android:name=".gallery.GallaryActivity"
-            android:label="Gallery" />
-        <activity
-            android:name=".profile.ProfileActivity"
-            android:label="Profile" />
-        <activity
-            android:name=".profile.ViewProfileActivity"
-            android:label=" View Profile" />
-        <activity
-            android:name=".HomeActivity"
-            android:label="Gallery" />
-        <activity
+
             android:name=".gallery.ImageDisplayActivity"
             android:label="Gallery" />
-        <activity android:name=".notifications.Parent_event" />
-        <activity android:name=".MainActivity" />
         <activity
             android:name=".gallery.GallaryActivityParent"
             android:label="Gallery Parent" />
         <activity android:name=".Schoolregister"></activity>
+
+
+        <activity android:name=".notifications.Parent_event" />
+
+        <activity
+            android:name=".tableLayout"
+            android:label="Activities" />
+
     </application>
 
 </manifest>

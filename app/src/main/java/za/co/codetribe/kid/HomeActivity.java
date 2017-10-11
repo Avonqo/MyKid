@@ -2,18 +2,20 @@ package za.co.codetribe.kid;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import za.co.codetribe.kid.activities.ActivitiesActivity;
-import za.co.codetribe.kid.gallery.GallaryActivity;
 import za.co.codetribe.kid.gallery.GallaryActivityParent;
 import za.co.codetribe.kid.notifications.Eventhelper;
+import za.co.codetribe.kid.notifications.EventsActivity;
+import za.co.codetribe.kid.aboutus.AboutActivity;
+import za.co.codetribe.kid.activities.ActivitiesActivity;
+import za.co.codetribe.kid.gallery.GallaryActivity;
 import za.co.codetribe.kid.notifications.Parent_event;
 import za.co.codetribe.kid.profile.ProfileActivity;
 import za.co.codetribe.kid.profile.ViewProfileActivity;
@@ -27,13 +29,13 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home2);
 
         events=(ImageView)findViewById(R.id.imageEvents);
-        aboutUs=(ImageView)findViewById(R.id.imageAboutUs);
+//        aboutUs=(ImageView)findViewById(R.id.imageAboutUs);
         activities=(ImageView)findViewById(R.id.imageActivities);
         gallary=(ImageView)findViewById(R.id.imageGallery);
-        inquiries=(ImageView)findViewById(R.id.imageInquiries);
-        notification=(ImageView)findViewById(R.id.imageNotification);
+//        inquiries=(ImageView)findViewById(R.id.imageInquiries);
+//        notification=(ImageView)findViewById(R.id.imageNotification);
         profile =(ImageView)findViewById(R.id.imageProfile);
-        parentg =(TextView) findViewById(R.id.parentGallery);
+//        parentg =(TextView) findViewById(R.id.parentGallery);
 
         events.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -43,14 +45,14 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 });
-        notification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,Parent_event.class);
-                startActivity(intent);
-
-            }
-        });
+//        notification.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(HomeActivity.this,Parent_event.class);
+//                startActivity(intent);
+//
+//            }
+//        });
         gallary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,26 +69,26 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-        inquiries.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,InquriesActivity.class);
-                startActivity(intent);
-
-            }
-        });
-        aboutUs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent intent = new Intent(HomeActivity.this,AboutActivity.class);
+//        inquiries.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(HomeActivity.this,InquriesActivity.class);
 //                startActivity(intent);
-
-                Intent intent1 = new Intent(Intent.ACTION_VIEW);
-                intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
-                startActivity(intent1);
-
-            }
-        });
+//
+//            }
+//        });
+//        aboutUs.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Intent intent = new Intent(HomeActivity.this,AboutActivity.class);
+////                startActivity(intent);
+//
+//                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+//                intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
+//                startActivity(intent1);
+//
+//            }
+//        });
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -120,9 +122,13 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+//    public void parentg(View view){
+//        Intent intent = new Intent(HomeActivity.this,GallaryActivityParent.class);
+//        startActivity(intent);
+//    }
+
     public void parentg(View view){
         Intent intent = new Intent(HomeActivity.this,GallaryActivityParent.class);
         startActivity(intent);
     }
-
 }

@@ -32,12 +32,12 @@
     android:hint="new password"/>
 
     <Button
+        android:id="@+id/btnReset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="REset passwoed"
-        android:id="@+id/btnReset"
         android:layout_gravity="center_horizontal"
-        android:onClick="reset"/>
+        android:onClick="reset"
+        android:text="REset passwoed" />
 
 
 </LinearLayout>
