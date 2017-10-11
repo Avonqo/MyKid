@@ -56,9 +56,12 @@
         <activity android:name=".HomeActivity"
             android:label="School"/>
 
-       <activity
+        <activity
+
             android:name=".gallery.ImageDisplayActivity"
             android:label="Gallery" />
+
+        <activity android:name=".notifications.Parent_event" />
 
         <activity
             android:name=".gallery.GallaryActivityParent"
@@ -67,8 +70,6 @@
         <activity
             android:name=".tableLayout"
             android:label="Activities" />
-
-        <activity android:name=".notifications.Parent_event"></activity>
     </application>
 
 </manifest>

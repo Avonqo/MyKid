@@ -121,8 +121,14 @@ public class HomeActivity extends AppCompatActivity {
         });
 
     }
+
 //    public void parentg(View view){
 //        Intent intent = new Intent(HomeActivity.this,GallaryActivityParent.class);
 //        startActivity(intent);
 //    }
+
+    public void parentg(View view){
+        Intent intent = new Intent(HomeActivity.this,GallaryActivityParent.class);
+        startActivity(intent);
+    }
 }
