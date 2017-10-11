@@ -5,14 +5,14 @@ package za.co.codetribe.kid.profile;
  */
 public class Learners
 {
-    String name,surname,gender,dateofbith,parentName,parentContants,address;
+    String name,surname,gender,dateofbith,parentName,parentContants,address,url;
     int id;
     public Learners() {
 
     }
 
 
-    public Learners(String name, String surname, String gender, String parentName, String parentContants, String address, String dateofbith) {
+    public Learners(String name, String surname, String gender, String parentName, String parentContants, String address, String dateofbith,String url) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
@@ -20,9 +20,18 @@ public class Learners
         this.parentName = parentName;
         this.parentContants = parentContants;
         this.address = address;
+        this.url=url;
+
 
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getParentName() {
         return parentName;
