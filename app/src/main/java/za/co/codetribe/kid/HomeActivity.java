@@ -2,20 +2,18 @@ package za.co.codetribe.kid;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import za.co.codetribe.kid.gallery.GallaryActivityParent;
-import za.co.codetribe.kid.notifications.Eventhelper;
-import za.co.codetribe.kid.notifications.EventsActivity;
-import za.co.codetribe.kid.aboutus.AboutActivity;
 import za.co.codetribe.kid.activities.ActivitiesActivity;
 import za.co.codetribe.kid.gallery.GallaryActivity;
+import za.co.codetribe.kid.gallery.GallaryActivityParent;
+import za.co.codetribe.kid.notifications.Eventhelper;
 import za.co.codetribe.kid.notifications.Parent_event;
 import za.co.codetribe.kid.profile.ProfileActivity;
 import za.co.codetribe.kid.profile.ViewProfileActivity;
@@ -121,12 +119,10 @@ public class HomeActivity extends AppCompatActivity {
         });
 
     }
-<<<<<<< HEAD
 
-=======
     public void parentg(View view){
         Intent intent = new Intent(HomeActivity.this,GallaryActivityParent.class);
         startActivity(intent);
     }
->>>>>>> 5de11f0c75823a6bc7884ee51470e8fa2b035e61
+
 }
