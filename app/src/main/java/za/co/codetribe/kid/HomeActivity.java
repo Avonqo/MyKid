@@ -29,10 +29,10 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home2);
 
         events=(ImageView)findViewById(R.id.imageEvents);
-//        aboutUs=(ImageView)findViewById(R.id.imageAboutUs);
+        aboutUs=(ImageView)findViewById(R.id.imageAboutUs);
         activities=(ImageView)findViewById(R.id.imageActivities);
         gallary=(ImageView)findViewById(R.id.imageGallery);
-//        inquiries=(ImageView)findViewById(R.id.imageInquiries);
+        inquiries=(ImageView)findViewById(R.id.imageInquiries);
 //        notification=(ImageView)findViewById(R.id.imageNotification);
         profile =(ImageView)findViewById(R.id.imageProfile);
 //        parentg =(TextView) findViewById(R.id.parentGallery);
@@ -69,26 +69,26 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-//        inquiries.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(HomeActivity.this,InquriesActivity.class);
+        inquiries.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this,InquriesActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(HomeActivity.this,AboutActivity.class);
 //                startActivity(intent);
-//
-//            }
-//        });
-//        aboutUs.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                Intent intent = new Intent(HomeActivity.this,AboutActivity.class);
-////                startActivity(intent);
-//
-//                Intent intent1 = new Intent(Intent.ACTION_VIEW);
-//                intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
-//                startActivity(intent1);
-//
-//            }
-//        });
+
+                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+                intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
+                startActivity(intent1);
+
+            }
+        });
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
