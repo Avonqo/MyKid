@@ -19,6 +19,7 @@
         android:layout_height="120dp"
         android:src="@drawable/home"
         android:elevation="10dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <ImageView
@@ -49,10 +50,9 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@drawable/gallery"
+        android:elevation="10dp"
         android:layout_below="@+id/imageProfile"
-        android:layout_alignLeft="@+id/imageProfile"
-        android:layout_alignStart="@+id/imageProfile"
-        android:elevation="10dp"/>
+        android:layout_alignStart="@+id/imageProfile" />
 
     <ImageView
         android:id="@+id/imageActivities"
@@ -63,47 +63,84 @@
         android:layout_below="@+id/imageEvents"
         android:layout_toEndOf="@+id/imageProfile" />
 
-    <ImageView
-        android:id="@+id/imageNotification"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/notification"
-        android:elevation="10dp"
-        android:layout_below="@+id/imageGallery"
-        android:layout_alignLeft="@+id/imageGallery"
-        android:layout_alignStart="@+id/imageGallery" />
-
-    <ImageView
-        android:id="@+id/imageAboutUs"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/aboutus"
-        android:elevation="10dp"
-        android:layout_below="@+id/imageActivities"
-        android:layout_alignLeft="@+id/imageActivities"
-        android:layout_alignStart="@+id/imageActivities" />
-
-    <ImageView
-        android:id="@+id/imageInquiries"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/inquiries"
-        android:elevation="10dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="59dp"
-        android:layout_below="@+id/imageGallery"
-        android:layout_alignStart="@+id/imageHome" />
-
-
     <TextView
-        android:id="@+id/parentGallery"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gallery Parent"
-        android:onClick="parentg"
-        android:layout_alignBottom="@+id/imageHome"
-        android:layout_toStartOf="@+id/imageHome"
-        android:layout_marginBottom="47dp" />
+        android:text="Profile"
+        android:textSize="20dp"
+        android:layout_above="@+id/imageGallery"
+        android:layout_alignStart="@+id/imageProfile"
+        android:layout_marginStart="25dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageGallery"
+        android:layout_alignStart="@+id/textView10"
+        android:text="Gallery"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Notification"
+        android:layout_above="@+id/imageActivities"
+        android:layout_toEndOf="@+id/imageProfile" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView15"
+        android:layout_alignTop="@+id/textView14"
+        android:textSize="20dp"
+        android:text="Activities" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageNotification"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:src="@drawable/notification"-->
+        <!--android:elevation="10dp"-->
+        <!--android:layout_below="@+id/imageGallery"-->
+        <!--android:layout_alignLeft="@+id/imageGallery"-->
+        <!--android:layout_alignStart="@+id/imageGallery" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageAboutUs"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:src="@drawable/aboutus"-->
+        <!--android:elevation="10dp"-->
+        <!--android:layout_below="@+id/imageActivities"-->
+        <!--android:layout_alignLeft="@+id/imageActivities"-->
+        <!--android:layout_alignStart="@+id/imageActivities" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageInquiries"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:src="@drawable/inquiries"-->
+        <!--android:elevation="10dp"-->
+        <!--android:layout_marginStart="14dp"-->
+        <!--android:layout_marginTop="59dp"-->
+        <!--android:layout_below="@+id/imageGallery"-->
+        <!--android:layout_alignStart="@+id/imageHome" />-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/parentGallery"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Gallery Parent"-->
+        <!--android:onClick="parentg"-->
+        <!--android:layout_alignBottom="@+id/imageHome"-->
+        <!--android:layout_toStartOf="@+id/imageHome"-->
+        <!--android:layout_marginBottom="47dp" />-->
 
 
     </RelativeLayout>

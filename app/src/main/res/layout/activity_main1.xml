@@ -7,15 +7,31 @@
     android:orientation="vertical"
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
-    android:background="@drawable/login_gradient"
+    android:background="@drawable/background"
  >
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="223dp"
+        android:src="@drawable/icon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/button3" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
+<<<<<<< HEAD
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+=======
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
         <!--logo or brand name-->
 
 
@@ -23,7 +39,10 @@
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginTop="70dp"
+=======
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
             android:background="@android:color/transparent"
             android:drawablePadding="12dp"
             android:drawableStart="@drawable/users"
@@ -67,6 +86,7 @@
             android:clickable="true"
             android:onClick="login"
             android:padding="16dp"
+<<<<<<< HEAD
             android:text="Login"
             android:textAllCaps="false"
             android:textColor="#f16f7d"
@@ -82,6 +102,9 @@
             android:onClick="loginAdmin"
             android:padding="16dp"
             android:text="Administrator Login"
+=======
+            android:text="log_in"
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
             android:textAllCaps="false"
             android:textColor="#f16f7d"
             android:textSize="16sp" />
@@ -90,17 +113,26 @@
             style="@style/Base.TextAppearance.AppCompat.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginTop="24dp"
+=======
+            android:layout_marginTop="12dp"
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
             android:background="@drawable/button_signup"
             android:clickable="true"
             android:onClick="register"
             android:padding="16dp"
+<<<<<<< HEAD
             android:text="Sign up"
+=======
+            android:text="sign_up"
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="16dp" />
 
         <TextView
+<<<<<<< HEAD
             style="@style/TextAppearance.AppCompat.Body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -110,6 +142,17 @@
             android:padding="16dp"
             android:text="forgot_your_password"
             android:textColor="#fff" />
+=======
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="passwordForget"
+            android:padding="16dp"
+            android:text="Forgot password?"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
     </LinearLayout>
 
 

@@ -17,8 +17,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+<<<<<<< HEAD
 import za.co.codetribe.kid.profile.admin.ForgetActivity;
 import za.co.codetribe.kid.profile.admin.Register;
+=======
+import za.co.codetribe.kid.profile.ForgetActivity;
+import za.co.codetribe.kid.profile.Register;
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
 
 
 public class MainActivity extends AppCompatActivity {
@@ -76,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                         if (task.isSuccessful()) {
-                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                            startActivity(new Intent(getApplicationContext(), Schoolregister.class));
                             finish();
                         } else {
                             Toast.makeText(getApplicationContext(), "User not successful registered...please try again ", Toast.LENGTH_LONG).show();
@@ -103,8 +108,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ForgetActivity.class);
         startActivity(intent);
     }
+<<<<<<< HEAD
     public void loginAdmin(View view) {
         Intent intent = new Intent(this, ForgetActivity.class);
         startActivity(intent);
     }
+=======
+
+
+
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
 }

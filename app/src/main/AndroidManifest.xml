@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,14 @@
        />
 
         <activity android:name=".aboutus.AboutActivity"
-
             android:label="About us"/>
+
+        <activity android:name=".MainActivity"
+            android:label="School"/>
+
+        <activity android:name=".HomeParent"
+            android:label="Parent"/>
+
         <activity android:name=".activities.ActivityEditsHelper"
             android:label="Activities"/>
 
@@ -37,10 +43,13 @@
         <activity android:name=".notifications.NotificationsActivity"
             android:label="Notification"/>
 
+<<<<<<< HEAD
         <activity android:name=".profile.admin.Register"
 
+=======
+        <activity android:name=".profile.Register"
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
             android:label=" Register"/>
-
 
         <activity android:name=".gallery.GallaryActivity"
             android:label="Gallery"/>
@@ -49,21 +58,27 @@
             android:label="Profile"/>
 
         <activity android:name=".profile.ViewProfileActivity"
-
             android:label=" View Profile"/>
+
         <activity android:name=".HomeActivity"
+            android:label="School"/>
 
-            android:label="Gallery"/>
+        <activity
 
-       <activity
             android:name=".gallery.ImageDisplayActivity"
             android:label="Gallery" />
-
         <activity
             android:name=".gallery.GallaryActivityParent"
             android:label="Gallery Parent" />
+        <activity android:name=".Schoolregister"></activity>
 
-        <activity android:name=".notifications.Parent_event"></activity>
+
+        <activity android:name=".notifications.Parent_event" />
+
+        <activity
+            android:name=".tableLayout"
+            android:label="Activities" />
+
     </application>
 
 </manifest>
