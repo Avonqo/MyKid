@@ -1,4 +1,4 @@
-package za.co.codetribe.kid.profile;
+package za.co.codetribe.kid.profile.teachers;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,8 +26,6 @@ import java.util.List;
 
 import za.co.codetribe.kid.HomeActivity;
 import za.co.codetribe.kid.R;
-import za.co.codetribe.kid.profile.admin.Admin;
-import za.co.codetribe.kid.profile.admin.AdminAdapter;
 
 
 public class ViewProfileActivity extends AppCompatActivity {
@@ -37,7 +35,7 @@ public class ViewProfileActivity extends AppCompatActivity {
 
     DatabaseReference roofdef, demodef;
     ListView listview;
-    List<Admin> learnersList;
+    List<Teachers> learnersList;
     Button view;
     private FirebaseAuth firebaseAuth;
 
@@ -105,12 +103,13 @@ public class ViewProfileActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Log.i("results", dataSnapshot.toString());
-                        Admin learners = dataSnapshot.getValue(Admin.class);
+                        Teachers learners = dataSnapshot.getValue(Teachers.class);
                         name.setText(learners.getName());
                         surname.setText(learners.getSurname());
                         address.setText(learners.getAddress());
                         gender.setText(learners.getGender());
-
+                        parentName.setText(learners.getParentName());
+                        parentContact.setText(learners.getParentContants());
                         dateofbirth.setText(learners.getDateofbith());
 
                         Glide.with(context).load(learners.getUrl()).into(profilePic);
@@ -144,7 +143,7 @@ public class ViewProfileActivity extends AppCompatActivity {
 
         learnersList.clear();
         for (DataSnapshot learnSnap : dataSnapshot.getChildren()) {
-            Admin learners = learnSnap.getValue(Admin.class);
+            Teachers learners = learnSnap.getValue(Teachers.class);
             learnersList.add(learners);
         }
 
@@ -157,7 +156,7 @@ public class ViewProfileActivity extends AppCompatActivity {
                // fetch(dataSnapshot);
                 learnersList.clear();
 
-                AdminAdapter learnersAdapter = new AdminAdapter(ViewProfileActivity.this,learnersList);
+                TeachersAdapter learnersAdapter = new TeachersAdapter(ViewProfileActivity.this,learnersList);
                 listview.setAdapter(learnersAdapter);
 
             }

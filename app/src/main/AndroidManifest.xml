@@ -34,6 +34,8 @@
 
         <activity android:name=".activities.ActivitiesActivity"
             android:label="Activities"/>
+        <activity android:name=".profile.admin.ForgetActivity"
+            android:label="Forget password"/>
 
         <activity android:name=".InquriesActivity"
             android:label="Inquries"/>
@@ -41,13 +43,18 @@
         <activity android:name=".notifications.NotificationsActivity"
             android:label="Notification"/>
 
+<<<<<<< HEAD
+        <activity android:name=".profile.admin.Register"
+
+=======
         <activity android:name=".profile.Register"
+>>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
             android:label=" Register"/>
 
         <activity android:name=".gallery.GallaryActivity"
             android:label="Gallery"/>
 
-        <activity android:name=".profile.ProfileActivity"
+        <activity android:name=".profile.admin.ProfileActivity"
             android:label="Profile"/>
 
         <activity android:name=".profile.ViewProfileActivity"
