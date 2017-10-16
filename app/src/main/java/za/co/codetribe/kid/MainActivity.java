@@ -17,12 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import za.co.codetribe.kid.profile.ForgetActivity;
-import za.co.codetribe.kid.profile.ProfileActivity;
-import za.co.codetribe.kid.profile.Register;
-
-import static za.co.codetribe.kid.R.drawable.notification;
-import static za.co.codetribe.kid.R.id.view;
+import za.co.codetribe.kid.profile.admin.ForgetActivity;
+import za.co.codetribe.kid.profile.admin.Register;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -104,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void passwordForget(View view) {
+        Intent intent = new Intent(this, ForgetActivity.class);
+        startActivity(intent);
+    }
+    public void loginAdmin(View view) {
         Intent intent = new Intent(this, ForgetActivity.class);
         startActivity(intent);
     }

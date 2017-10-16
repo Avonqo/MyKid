@@ -12,12 +12,10 @@ import android.widget.TextView;
 
 import za.co.codetribe.kid.gallery.GallaryActivityParent;
 import za.co.codetribe.kid.notifications.Eventhelper;
-import za.co.codetribe.kid.notifications.EventsActivity;
-import za.co.codetribe.kid.aboutus.AboutActivity;
 import za.co.codetribe.kid.activities.ActivitiesActivity;
 import za.co.codetribe.kid.gallery.GallaryActivity;
 import za.co.codetribe.kid.notifications.Parent_event;
-import za.co.codetribe.kid.profile.ProfileActivity;
+import za.co.codetribe.kid.profile.admin.ProfileActivity;
 import za.co.codetribe.kid.profile.ViewProfileActivity;
 
 public class HomeActivity extends AppCompatActivity {

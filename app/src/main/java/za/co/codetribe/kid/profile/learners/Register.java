@@ -1,4 +1,4 @@
-package za.co.codetribe.kid.profile;
+package za.co.codetribe.kid.profile.learners;
 
 import android.app.ProgressDialog;
 import android.content.Intent;

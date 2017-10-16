@@ -1,20 +1,17 @@
-package za.co.codetribe.kid.profile;
+package za.co.codetribe.kid.profile.teachers;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,7 +30,6 @@ import java.util.List;
 
 import za.co.codetribe.kid.HomeActivity;
 import za.co.codetribe.kid.R;
-import za.co.codetribe.kid.gallery.ImagePojo;
 
 
 public class ProfileActivity extends AppCompatActivity {
@@ -41,14 +37,14 @@ public class ProfileActivity extends AppCompatActivity {
     EditText name, surname, address, gender, parentName, parentContact, dateofbirth, email, password;
     String nam, surnam, addres, gende, parentNam, parentContac, dateofbirt, pic;
     Button save;
-    ImageButton profilePic;
+    ImageView profilePic;
     Button view;
     Uri imageUri;
 
 
     DatabaseReference roofdef, demodef;
     ListView listview;
-    List<Learners> learnersList;
+    List<Teachers> learnersList;
 
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
@@ -98,7 +94,7 @@ public class ProfileActivity extends AppCompatActivity {
         save = (Button) findViewById(R.id.saveData);
         view = (Button) findViewById(R.id.view);
 
-        profilePic = (ImageButton) findViewById(R.id.imageButton);
+        profilePic = (ImageView) findViewById(R.id.imageButton);
         name = (EditText) findViewById(R.id.editname);
         surname = (EditText) findViewById(R.id.editsurname);
 //        email = (EditText) findViewById(R.id.editEmail);
@@ -123,22 +119,24 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //addLearners();
-                uploadImage();
-            }
-
-
-        });
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // retreive();
-
-                Intent intent = new Intent(ProfileActivity.this, ViewProfileActivity.class);
+                addLearners();
+                //uploadImage();
+                Intent intent = new Intent(ProfileActivity.this,HomeActivity.class);
                 startActivity(intent);
             }
+
+
         });
+
+//        view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // retreive();
+//
+//                Intent intent = new Intent(ProfileActivity.this, ViewProfileActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
@@ -146,30 +144,51 @@ public class ProfileActivity extends AppCompatActivity {
 
 //to save extra info using current user id
 
-//    private void addLearners()
-//    {
-//        nam = name.getText().toString().trim();
-//        surnam = surname.getText().toString().trim();
-//        addres = address.getText().toString();
-//        gende = gender.getText().toString();
-//        parentNam = parentName.getText().toString();
-//        parentContac = parentContact.getText().toString();
-//        dateofbirt = dateofbirth.getText().toString();
-//
-//
-//
-//
-//
-//        Learners learners = new Learners(nam,surnam,addres,gende,parentNam,parentContac,dateofbirt);
-//
-//
-//        FirebaseUser user= firebaseAuth.getCurrentUser();
-//        demodef.child(user.getUid()).setValue(learners);
-//
-//            Toast.makeText(ProfileActivity.this, "data saved ", Toast.LENGTH_LONG).show();
-//
-//
-//    }
+    private void addLearners()
+    {
+        nam = name.getText().toString().trim();
+        surnam = surname.getText().toString().trim();
+        addres = address.getText().toString();
+        gende = gender.getText().toString();
+        parentNam = parentName.getText().toString();
+        parentContac = parentContact.getText().toString();
+        dateofbirt = dateofbirth.getText().toString();
+
+        final String names = name.getText().toString().trim();
+        surnam = surname.getText().toString().trim();
+        addres = address.getText().toString();
+        gende = gender.getText().toString();
+        parentNam = parentName.getText().toString();
+        parentContac = parentContact.getText().toString();
+        dateofbirt = dateofbirth.getText().toString();
+
+
+        Teachers learners = new Teachers();
+        learners.setName(names);
+        learners.setAddress(addres);
+        learners.setGender(gende);
+        learners.setDateofbith(dateofbirt);
+        learners.setParentContants(parentContac);
+        learners.setParentName(parentNam);
+        learners.setSurname(surnam);
+
+
+        demodef.child(user.getUid()).setValue(learners);
+
+        //Toast.makeText(ProfileActivity.this, "data saved ", Toast.LENGTH_LONG).show();
+
+
+
+       // Admin learners = new Admin(nam,surnam,addres,gende,parentNam,parentContac,dateofbirt);
+
+
+        //FirebaseUser user= firebaseAuth.getCurrentUser();
+        //demodef.child(user.getUid()).setValue(learners);
+
+            //Toast.makeText(ProfileActivity.this, "data saved ", Toast.LENGTH_LONG).show();
+
+
+    }
 
 
     //method to upload picture
@@ -181,44 +200,24 @@ public class ProfileActivity extends AppCompatActivity {
         if (requestCode == ACTION_CODE && resultCode == RESULT_OK) {
             imageUri = data.getData();
             profilePic.setImageURI(imageUri);
+            uploadImage();
         }
     }
 
+
     public void uploadImage() {
 
-        final String names = name.getText().toString().trim();
-        surnam = surname.getText().toString().trim();
-        addres = address.getText().toString();
-        gende = gender.getText().toString();
-        parentNam = parentName.getText().toString();
-        parentContac = parentContact.getText().toString();
-        dateofbirt = dateofbirth.getText().toString();
 
+       // if (!TextUtils.isEmpty(names)) {
 
-        if (!TextUtils.isEmpty(names)) {
-
-            StorageReference filePath = storageReference.child("images").child(imageUri.getLastPathSegment());
+            StorageReference filePath = storageReference.child("learner_profile").child(imageUri.getLastPathSegment());
             filePath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     @SuppressWarnings("VisibleForTests") Uri uriImage = taskSnapshot.getDownloadUrl();
 
-
-                    Learners learners = new Learners();
-                    learners.setName(names);
-                    learners.setUrl(uriImage.toString());
-                    learners.setAddress(addres);
-                    learners.setGender(gende);
-                    learners.setDateofbith(dateofbirt);
-                    learners.setParentContants(parentContac);
-                    learners.setParentName(parentNam);
-                    learners.setSurname(surnam);
-
-
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                    demodef.child(user.getUid()).setValue(learners);
-
-                    Toast.makeText(ProfileActivity.this, "data saved ", Toast.LENGTH_LONG).show();
+                    demodef.child(user.getUid()).child("url").setValue(uriImage.toString());
+                   // learners.setUrl(uriImage.toString());
 
 //
 
@@ -226,7 +225,7 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             });
 
-        }
+       // }
     }
 
 
@@ -237,7 +236,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         learnersList.clear();
         for (DataSnapshot learnSnap : dataSnapshot.getChildren()) {
-            Learners learners = learnSnap.getValue(Learners.class);
+            Teachers learners = learnSnap.getValue(Teachers.class);
             learnersList.add(learners);
         }
 
@@ -249,7 +248,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 learnersList.clear();
 
-                LearnersAdapter learnersAdapter = new LearnersAdapter(ProfileActivity.this, learnersList);
+                TeachersAdapter learnersAdapter = new TeachersAdapter(ProfileActivity.this, learnersList);
                 listview.setAdapter(learnersAdapter);
 
             }
@@ -297,7 +296,7 @@ public class ProfileActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Log.i("results", dataSnapshot.toString());
-                    Learners learners = dataSnapshot.getValue(Learners.class);
+                    Teachers learners = dataSnapshot.getValue(Teachers.class);
                     name.setText(learners.getName());
                     surname.setText(learners.getSurname());
                     address.setText(learners.getAddress());

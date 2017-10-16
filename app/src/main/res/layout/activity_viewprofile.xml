@@ -7,12 +7,17 @@
     tools:context="za.co.codetribe.mynfirst.ProfileActivity"
     android:orientation="vertical">
 
-    <ImageView
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:elevation="10dp"
+        android:src="@drawable/factfile"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
 
     <TextView
 
@@ -24,9 +29,9 @@
         android:text="Learner's Details"
        android:textStyle="bold"
         android:id="@+id/textView"
-        android:layout_below="@+id/imageButton"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 
 
     <TextView

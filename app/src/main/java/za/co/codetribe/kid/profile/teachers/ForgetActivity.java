@@ -1,4 +1,4 @@
-package za.co.codetribe.kid.profile;
+package za.co.codetribe.kid.profile.teachers;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,8 +14,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 import za.co.codetribe.kid.R;
-
-
 
 
 public class ForgetActivity extends AppCompatActivity {

@@ -1,18 +1,18 @@
-package za.co.codetribe.kid.profile;
+package za.co.codetribe.kid.profile.teachers;
 
 /**
  * Created by Codetribe on 2017/04/25.
  */
-public class Learners
+public class Teachers
 {
     String name,surname,gender,dateofbith,parentName,parentContants,address,url;
     int id;
-    public Learners() {
+    public Teachers() {
 
     }
 
 
-    public Learners(String name, String surname, String gender, String parentName, String parentContants, String address, String dateofbith,String url) {
+    public Teachers(String name, String surname, String gender, String parentName, String parentContants, String address, String dateofbith, String url) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
@@ -24,6 +24,20 @@ public class Learners
 
 
     }
+
+    public Teachers(String name, String surname, String gender, String parentName, String parentContants, String address, String dateofbith) {
+        this.name = name;
+        this.surname = surname;
+        this.gender = gender;
+        this.dateofbith = dateofbith;
+        this.parentName = parentName;
+        this.parentContants = parentContants;
+        this.address = address;
+
+
+
+    }
+
 
     public String getUrl() {
         return url;
@@ -95,7 +109,7 @@ public class Learners
 
     @Override
     public String toString() {
-        return "Learners{" +
+        return "Admin{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender='" + gender + '\'' +

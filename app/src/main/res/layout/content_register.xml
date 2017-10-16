@@ -7,7 +7,7 @@
     android:paddingTop="75dp"
 
 
-    tools:context="za.co.codetribe.kid.profile.Register"
+    tools:context="za.co.codetribe.kid.profile.admin.Register"
     tools:showIn="@layout/content_register"
     android:orientation="vertical"
     android:weightSum="1">
