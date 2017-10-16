@@ -9,7 +9,8 @@ import android.widget.TextView;
 
 import za.co.codetribe.kid.gallery.GallaryActivityParent;
 import za.co.codetribe.kid.notifications.Parent_event;
-import za.co.codetribe.kid.profile.ProfileActivity;
+import za.co.codetribe.kid.profile.learners.ProfileActivity;
+
 
 public class HomeParent extends AppCompatActivity {
     ImageView events, notification, gallary, activities, aboutUs, inquiries, profile;
@@ -32,7 +33,7 @@ public class HomeParent extends AppCompatActivity {
 //        events.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,Eventhelper.class);
+//                Intent intent = new Intent(SchoolMainActivity.this,Eventhelper.class);
 //                startActivity(intent);
 //
 //            }
@@ -74,7 +75,7 @@ public class HomeParent extends AppCompatActivity {
 //        inquiries.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,InquriesActivity.class);
+//                Intent intent = new Intent(SchoolMainActivity.this,InquriesActivity.class);
 //                startActivity(intent);
 //
 //            }
@@ -82,7 +83,7 @@ public class HomeParent extends AppCompatActivity {
 //        aboutUs.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-////                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+////                Intent intent = new Intent(SchoolMainActivity.this,AboutActivity.class);
 ////                startActivity(intent);
 //
 //                Intent intent1 = new Intent(Intent.ACTION_VIEW);
@@ -94,7 +95,7 @@ public class HomeParent extends AppCompatActivity {
 //
 //    }
 //    public void parentg(View view){
-//        Intent intent = new Intent(MainActivity.this,GallaryActivityParent.class);
+//        Intent intent = new Intent(SchoolMainActivity.this,GallaryActivityParent.class);
 //        startActivity(intent);
     }
 }

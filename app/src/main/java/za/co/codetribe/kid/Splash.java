@@ -33,7 +33,7 @@ Button Parent,School;
         aboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+//                Intent intent = new Intent(SchoolMainActivity.this,AboutActivity.class);
 //                startActivity(intent);
 
                 Intent intent1 = new Intent(Intent.ACTION_VIEW);
@@ -45,12 +45,12 @@ Button Parent,School;
     }
 
   public void parent(View view){
-      Intent i = new Intent(Splash.this,HomeParent.class);
+      Intent i = new Intent(Splash.this,ParentMainActivity.class);
       startActivity(i);
   }
 
     public void school(View view){
-        Intent i = new Intent(Splash.this,MainActivity.class);
+        Intent i = new Intent(Splash.this,SchoolMainActivity.class);
         startActivity(i);
     }
 

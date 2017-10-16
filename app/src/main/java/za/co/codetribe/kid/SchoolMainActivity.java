@@ -17,16 +17,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-<<<<<<< HEAD
+
 import za.co.codetribe.kid.profile.admin.ForgetActivity;
 import za.co.codetribe.kid.profile.admin.Register;
-=======
-import za.co.codetribe.kid.profile.ForgetActivity;
-import za.co.codetribe.kid.profile.Register;
->>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
 
 
-public class MainActivity extends AppCompatActivity {
+
+
+
+public class SchoolMainActivity extends AppCompatActivity {
 
     TextView text;
     EditText edtemail;
@@ -100,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void register(View view) {
-        Intent intent = new Intent(MainActivity.this, Register.class);
+        Intent intent = new Intent(SchoolMainActivity.this, Register.class);
         startActivity(intent);
     }
 
@@ -108,14 +107,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ForgetActivity.class);
         startActivity(intent);
     }
-<<<<<<< HEAD
+
     public void loginAdmin(View view) {
         Intent intent = new Intent(this, ForgetActivity.class);
         startActivity(intent);
     }
-=======
 
-
-
->>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
 }
