@@ -21,8 +21,7 @@ import za.co.codetribe.kid.profile.admin.ForgetActivity;
 import za.co.codetribe.kid.profile.admin.Register;
 
 
-
-public class MainActivity extends AppCompatActivity {
+public class ParentMainActivity extends AppCompatActivity {
 
     TextView text;
     EditText edtemail;
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                         if (task.isSuccessful()) {
-                            startActivity(new Intent(getApplicationContext(), Schoolregister.class));
+                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                             finish();
                         } else {
                             Toast.makeText(getApplicationContext(), "User not successful registered...please try again ", Toast.LENGTH_LONG).show();
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void register(View view) {
-        Intent intent = new Intent(MainActivity.this, Register.class);
+        Intent intent = new Intent(ParentMainActivity.this, Register.class);
         startActivity(intent);
     }
 

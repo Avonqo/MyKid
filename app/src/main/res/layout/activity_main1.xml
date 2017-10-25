@@ -23,15 +23,24 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1">
+<<<<<<< HEAD
 <!--<ScrollView-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent">-->
+=======
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+>>>>>>> 691eb0b2eec645b42243e76c3f74804010f48042
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+<<<<<<< HEAD
         <!--logo or brand name-->
 
 
@@ -48,6 +57,27 @@
             <!--android:maxLines="1"-->
             <!--android:padding="8dp"-->
             <!--android:textColorHint="#ffffff" />-->
+=======
+
+        <!--logo or brand name-->
+
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="12dp"
+            android:drawableStart="@drawable/users"
+            android:ems="10"
+            android:hint="username"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#ffffff" />
+>>>>>>> 691eb0b2eec645b42243e76c3f74804010f48042
 
         <!--<View-->
             <!--android:layout_width="match_parent"-->
@@ -97,6 +127,10 @@
             android:onClick="loginAdmin"
             android:padding="16dp"
             android:text="Administrator Login"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 691eb0b2eec645b42243e76c3f74804010f48042
             android:textAllCaps="false"
             android:textColor="#f16f7d"
             android:textSize="16sp" />
@@ -105,12 +139,19 @@
             style="@style/Base.TextAppearance.AppCompat.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginTop="24dp"
+=======
+>>>>>>> 691eb0b2eec645b42243e76c3f74804010f48042
             android:background="@drawable/button_signup"
             android:clickable="true"
             android:onClick="register"
             android:padding="16dp"
+<<<<<<< HEAD
             android:text="Sign up"
+=======
+            android:text="sign_up"
+>>>>>>> 691eb0b2eec645b42243e76c3f74804010f48042
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="16dp" />
@@ -118,9 +159,8 @@
         <TextView
 
             style="@style/TextAppearance.AppCompat.Body2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+<<<<<<< HEAD
             android:clickable="true"
             android:onClick="passwordForget"
             android:padding="16dp"
@@ -132,5 +172,20 @@
     </LinearLayout>
 
 <!--</ScrollView>-->
+=======
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="passwordForget"
+            android:padding="16dp"
+            android:text="Forgot password?"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+        </ScrollView>
+
+</LinearLayout>
+>>>>>>> 691eb0b2eec645b42243e76c3f74804010f48042
 </LinearLayout>
 </LinearLayout>

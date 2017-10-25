@@ -34,7 +34,7 @@ public class HomeParent extends AppCompatActivity {
 //        events.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,Eventhelper.class);
+//                Intent intent = new Intent(SchoolMainActivity.this,Eventhelper.class);
 //                startActivity(intent);
 //
 //            }
@@ -73,6 +73,34 @@ public class HomeParent extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
+//        inquiries.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(SchoolMainActivity.this,InquriesActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+//        aboutUs.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Intent intent = new Intent(SchoolMainActivity.this,AboutActivity.class);
+////                startActivity(intent);
+//
+//                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+//                intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
+//                startActivity(intent1);
+//
+//            }
+//        });
+//
+//    }
+//    public void parentg(View view){
+//        Intent intent = new Intent(SchoolMainActivity.this,GallaryActivityParent.class);
+//        startActivity(intent);
+    }
+=======
         inquiries.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,5 +127,6 @@ public class HomeParent extends AppCompatActivity {
 //        Intent intent = new Intent(MainActivity.this,GallaryActivityParent.class);
 ////        startActivity(intent);
 //    }
+>>>>>>> 81b81eb5948d3420d58653a259d661270521274f
 }
 

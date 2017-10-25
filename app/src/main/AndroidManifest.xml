@@ -23,8 +23,10 @@
         <activity android:name=".aboutus.AboutActivity"
             android:label="About us"/>
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".SchoolMainActivity"
             android:label="School"/>
+        <activity android:name=".ParentMainActivity"
+            android:label="Parent"/>
 
         <activity android:name=".HomeParent"
             android:label="Parent"/>
@@ -43,8 +45,14 @@
         <activity android:name=".notifications.NotificationsActivity"
             android:label="Notification"/>
 
+<<<<<<< HEAD
 
         <activity android:name=".profile.admin.Register"
+=======
+
+        <activity android:name=".profile.admin.Register"
+
+>>>>>>> 691eb0b2eec645b42243e76c3f74804010f48042
             android:label=" Register"/>
 
         <activity android:name=".gallery.GallaryActivity"
