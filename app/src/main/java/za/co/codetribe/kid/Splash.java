@@ -18,6 +18,7 @@ Button Parent,School;
 
         Parent = (Button)findViewById(R.id.button2);
         School = (Button)findViewById(R.id.button3);
+<<<<<<< HEAD
         aboutUs=(ImageView)findViewById(R.id.imageAboutUs);
         inquiries=(ImageView)findViewById(R.id.imageInquiries);
 
@@ -39,18 +40,49 @@ Button Parent,School;
                 Intent intent1 = new Intent(Intent.ACTION_VIEW);
                 intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
                 startActivity(intent1);
+=======
+//        aboutUs=(ImageView)findViewById(R.id.imageAboutUs);
+//        inquiries=(ImageView)findViewById(R.id.imageInquiries);
+>>>>>>> 81b81eb5948d3420d58653a259d661270521274f
 
-            }
-        });
+//        inquiries.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Splash.this,InquriesActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+
+//        aboutUs.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+////                startActivity(intent);
+//
+//                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+//                intent1.setData(Uri.parse("https://www.google.co.za/maps/place/The+Innovation+Hub/@-25.7288732,28.2602829,11.5z/data=!4m5!3m4!1s0x1e956044ef7e34af:0x74cb1ddbc5cd8e9e!8m2!3d-25.7487047!4d28.2680154"));
+//                startActivity(intent1);
+//
+//            }
+//        });
     }
 
   public void parent(View view){
+<<<<<<< HEAD
       Intent i = new Intent(Splash.this,ParentMainActivity.class);
+=======
+      Intent i = new Intent(Splash.this,MainActivity.class);
+>>>>>>> 81b81eb5948d3420d58653a259d661270521274f
       startActivity(i);
   }
 
     public void school(View view){
+<<<<<<< HEAD
         Intent i = new Intent(Splash.this,SchoolMainActivity.class);
+=======
+        Intent i = new Intent(Splash.this,Schoolregister.class);
+>>>>>>> 81b81eb5948d3420d58653a259d661270521274f
         startActivity(i);
     }
 
