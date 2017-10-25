@@ -43,12 +43,8 @@
         <activity android:name=".notifications.NotificationsActivity"
             android:label="Notification"/>
 
-<<<<<<< HEAD
-        <activity android:name=".profile.admin.Register"
 
-=======
-        <activity android:name=".profile.Register"
->>>>>>> 9ae8f949e394a899f636307cfab2569c96985057
+        <activity android:name=".profile.admin.Register"
             android:label=" Register"/>
 
         <activity android:name=".gallery.GallaryActivity"

@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import za.co.codetribe.kid.gallery.GallaryActivityParent;
 import za.co.codetribe.kid.notifications.Parent_event;
-import za.co.codetribe.kid.profile.ProfileActivity;
+import za.co.codetribe.kid.profile.learners.ProfileActivity;
+
 
 public class HomeParent extends AppCompatActivity {
     ImageView events, notification, gallary, activities,profile;
